@@ -1,0 +1,13 @@
+version: "3.3"
+services:
+  db:
+    image: "postgres:alpine"
+    container_name: "animales_sql"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: animales_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ludens123
+    volumes:
+      - "./local_dev_db:/usr/src/db"
